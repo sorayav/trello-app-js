@@ -6,11 +6,11 @@ const api = '../../api/board.json';
 
 const connectToApi = () => {
   fetch(api)
-  .then(response => response.json())
-  .then(data => {
-    lists = data.board.list;
-    paintData(lists);
-  })
+    .then(response => response.json())
+    .then(data => {
+      lists = data.board.list;
+      paintData(lists);
+    });
 };
 
 const paintData = (lists) => {
@@ -23,7 +23,7 @@ const paintData = (lists) => {
     newColumn.setAttribute('class', 'app-list-form align-middle p-1 position-relative');
     const newInput = document.createElement('input');
     newInput.setAttribute('class', 'app-list-input form-control form-control-sm');
-    newInput.setAttribute('id', `${list.id}`)
+    newInput.setAttribute('id', `${list.id}`);
     newInput.setAttribute('value', `${list.title}`);
     newInput.setAttribute('type', 'text');
     newInput.setAttribute('title', 'Editar el título de la lista');
@@ -72,7 +72,7 @@ const paintData = (lists) => {
     divAppListBtns.appendChild(btnMoveRight);
     divAppListOptions.appendChild(divAppListBtns);
     newColumn.appendChild(divAppListOptions);
-    
+
     for (let card of list.cards) {
       const newCard = document.createElement('article');
       newCard.setAttribute('class', 'js-card app-card m-1 mb-2 p-2 bg-white rounded-sm app-cursor-pointer shadow-sm');
@@ -106,7 +106,7 @@ const paintData = (lists) => {
   addBtnRemoveListeners();
   addBtnMoveListeners();
   btnAddList();
-}
+};
 
 const btnAddList = () => {
   const divBtnNewList = document.createElement('div');
@@ -120,7 +120,7 @@ const btnAddList = () => {
   divBtnNewList.appendChild(btnNewList);
   const main = document.querySelector('main');
   main.appendChild(divBtnNewList);
-}
+};
 
 
 const addBtnRemoveListeners = () => {
@@ -128,7 +128,7 @@ const addBtnRemoveListeners = () => {
   for (let btn of btnRemove) {
     btn.addEventListener('click', removeList);
   }
-}
+};
 
 const removeList = (e) => {
   let divAppList = document.querySelector('.app-list');
@@ -146,16 +146,16 @@ const addBtnMoveListeners = () => {
   for (let btn of btnMoveRight) {
     btn.addEventListener('click', moveListRight);
   }
-}
+};
 
 const moveListLeft = () => {
   const divAppList = document.querySelector('.app-list');
   appboard.insertBefore(divAppList, divAppList.previousElementSibling);
-}
+};
 
 const moveListRight = () => {
   const divAppList = document.querySelector('.app-list');
   appboard.insertBefore(divAppList.nextElementSibling, divAppList);
-}
+};
 
 connectToApi();
