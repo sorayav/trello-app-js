@@ -10,9 +10,9 @@
             "title": "Publicar en GitHub pages",
             "description": "Lorem ipsum dolor sit amet",
             "tags": [
-              "JS",
+              "Html",
               "Css",
-              "Html"
+              "Js"
             ]
           }
         ]
@@ -51,9 +51,7 @@
             "title": "Escuchar eventos",
             "description":"Lorem ipsum dolor sit amet",
             "tags": [
-              "JS",
-              "Css",
-              "Html"
+              "JS"
             ]
           }
         ]
@@ -78,7 +76,6 @@
             "description": "Lorem ipsum dolor sit amet",
             "tags": [
               "JS",
-              "Css",
               "Html"
             ]
           },
@@ -88,7 +85,6 @@
             "description": "Lorem ipsum dolor sit amet",
             "tags": [
               "JS",
-              "Css",
               "Html"
             ]
           }

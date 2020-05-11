@@ -1,18 +1,3 @@
-'use strict';
-
-let lists = null;
-const appboard = document.querySelector('.app-board');
-const api = '../../api/board.json';
-
-const connectToApi = () => {
-  fetch(api)
-    .then(response => response.json())
-    .then(data => {
-      lists = data.board.list;
-      paintData(lists);
-    });
-};
-
 const paintData = (lists) => {
   for (let list of lists) {
     const divAppList = document.createElement('div');
@@ -108,56 +93,4 @@ const paintData = (lists) => {
   btnAddList();
 };
 
-const btnAddList = () => {
-  const divBtnNewList = document.createElement('div');
-  const btnNewList = document.createElement('button');
-  btnNewList.setAttribute('type', 'button');
-  btnNewList.setAttribute('class', 'btn btn-light btn-outline-primary btn-sm mr-5 shadow-sm');
-  btnNewList.setAttribute('title', 'Añadir una nueva lista');
-  const spanBtnNewList = document.createElement('span');
-  spanBtnNewList.setAttribute('class', 'fas fa-plus');
-  btnNewList.appendChild(spanBtnNewList);
-  divBtnNewList.appendChild(btnNewList);
-  const main = document.querySelector('main');
-  main.appendChild(divBtnNewList);
-};
-
-
-const addBtnRemoveListeners = () => {
-  const btnRemove = document.querySelectorAll('.btn-remove');
-  for (let btn of btnRemove) {
-    btn.addEventListener('click', removeList);
-  }
-};
-
-const removeList = (ev) => {
-  const list = ev.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
-  appboard.removeChild(list);
-  // const listIndex = lists.findIndex(list => list.id === id);
-  // lists.splice(listIndex, 1);
-  // poner id a app-list
-};
-
-const addBtnMoveListeners = () => {
-  const btnMoveLeft = document.querySelectorAll('.app-list-move-left');
-  const btnMoveRight = document.querySelectorAll('.app-list-move-right');
-  for (let btn of btnMoveLeft) {
-    btn.addEventListener('click', moveListLeft);
-  }
-  for (let btn of btnMoveRight) {
-    btn.addEventListener('click', moveListRight);
-  }
-};
-
-const moveListLeft = () => {
-  const divAppList = document.querySelector('.app-list');
-  appboard.insertBefore(divAppList, divAppList.previousElementSibling);
-};
-
-const moveListRight = () => {
-  const divAppList = document.querySelector('.app-list');
-  appboard.insertBefore(divAppList.nextElementSibling, divAppList);
-};
-
-
-connectToApi();
+export default paintData;
