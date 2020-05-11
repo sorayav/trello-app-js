@@ -27,7 +27,6 @@
             "description": "Lorem ipsum dolor sit amet",
             "tags": [
               "JS",
-              "Css",
               "Html"
             ]
           },
@@ -45,6 +44,7 @@
       },
       {
         "title": "Haciendo",
+        id: 3,
         "cards": [
           {
             "id": "8jdhd",
@@ -60,6 +60,7 @@
       },
       {
         "title": "Hecho",
+        "id": 4,
         "cards": [
           {
             "id": "ejdsi3930",
