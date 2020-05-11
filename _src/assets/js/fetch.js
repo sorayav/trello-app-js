@@ -131,8 +131,8 @@ const addBtnRemoveListeners = () => {
 };
 
 const removeList = (ev) => {
-  const list = ev.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
-  appboard.removeChild(list);
+  const column = ev.currentTarget.parentElement.parentElement.parentElement.parentElement.parentElement;
+  appboard.removeChild(column);
   // const listIndex = lists.findIndex(list => list.id === id);
   // lists.splice(listIndex, 1);
   // poner id a app-list
