@@ -149,14 +149,14 @@ const addBtnMoveListeners = () => {
   }
 };
 
-const moveListLeft = () => {
-  const divAppList = document.querySelector('.app-list');
-  appboard.insertBefore(divAppList, divAppList.previousElementSibling);
+const moveListLeft = (ev) => {
+  const column = ev.currentTarget.parentElement.parentElement.parentElement.parentElement.parentElement;
+  appboard.insertBefore(column, column.previousElementSibling);
 };
 
-const moveListRight = () => {
-  const divAppList = document.querySelector('.app-list');
-  appboard.insertBefore(divAppList.nextElementSibling, divAppList);
+const moveListRight = (ev) => {
+  const column = ev.currentTarget.parentElement.parentElement.parentElement.parentElement.parentElement;
+  appboard.insertBefore(column.nextElementSibling, column);
 };
 
 
