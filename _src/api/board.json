@@ -1,0 +1,98 @@
+{
+  "board": {
+    "list": [
+      {
+        "title": "Backlogs",
+        "id": 1,
+        "cards": [
+          {
+            "id": "939393030",
+            "title": "Publicar en GitHub pages",
+            "description": "Lorem ipsum dolor sit amet",
+            "tags": [
+              "JS",
+              "Css",
+              "Html"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "To do",
+        "id": 2,
+        "cards": [
+          {
+            "id": "sdf0s98234n3ki",
+            "title": "Unificar funcionalidad",
+            "description": "Lorem ipsum dolor sit amet",
+            "tags": [
+              "JS",
+              "Css",
+              "Html"
+            ]
+          },
+          {
+            "id": "9f8734ksd",
+            "title": "Pintar el DOM",
+            "description": "Lorem ipsum dolor sit amet",
+            "tags": [
+              "JS",
+              "Css",
+              "Html"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Haciendo",
+        "cards": [
+          {
+            "id": "8jdhd",
+            "title": "Escuchar eventos",
+            "description":"Lorem ipsum dolor sit amet",
+            "tags": [
+              "JS",
+              "Css",
+              "Html"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Hecho",
+        "cards": [
+          {
+            "id": "ejdsi3930",
+            "title": "Manipular datos",
+            "description": "Lorem ipsum dolor sit amet",
+            "tags": [
+              "JS",
+              "Css",
+              "Html"
+            ]
+          },
+          {
+            "id": "e38338393",
+            "title": "Guardar los datos en localStorage",
+            "description": "Lorem ipsum dolor sit amet",
+            "tags": [
+              "JS",
+              "Css",
+              "Html"
+            ]
+          },
+          {
+            "id": "iw822osf",
+            "title": "Obtener datos del API",
+            "description": "Lorem ipsum dolor sit amet",
+            "tags": [
+              "JS",
+              "Css",
+              "Html"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
